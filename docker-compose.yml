@@ -1,7 +1,7 @@
 ---
 services:
   disavow-generator:
-    build: .
+    image: bansheetech/disavow-generator:latest
     container_name: disavow-generator
     restart: unless-stopped
     ports:

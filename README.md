@@ -27,17 +27,20 @@
 
 ---
 
+![Processing](https://raw.githubusercontent.com/BansheeTech/Disavow-Generator/refs/heads/main/ui/img/Processing.png)
+![Whitelist](https://raw.githubusercontent.com/BansheeTech/Disavow-Generator/refs/heads/main/ui/img/Whitelist.png)
+![Historic](https://raw.githubusercontent.com/BansheeTech/Disavow-Generator/refs/heads/main/ui/img/Historic.png)
+
 ## Quick Start with Docker
 
 ```bash
 # Clone the repository
 git clone https://github.com/BansheeTech/Disavow-Generator.git
-cd Disavow-Generator
 
-# Start the container
+# Bring up the container
 docker compose up -d
 
-# Access the web interface
+# Access
 open http://localhost:44444
 ```
 
@@ -140,12 +143,16 @@ Example docker-compose.yml:
 ```yaml
 services:
   disavow-generator:
-    build: .
+    image: bansheetech/disavow-generator:latest
+    container_name: disavow-generator
+    restart: unless-stopped
     ports:
       - "44444:44444"
     volumes:
-      - ./config:/app/conf
-      - ./data:/app/__DISAVOW_DATA__
+      - ./disavow_data:/app/__DISAVOW_DATA__
+      - ./disavow_conf:/app/conf
+    environment:
+      - TZ=Europe/Madrid
 ```
 
 ---
