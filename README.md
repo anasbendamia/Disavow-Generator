@@ -4,7 +4,9 @@
   <strong>Negative SEO protection web app with automated, hierarchical and historical Google Search Console disavow generation and granular link-level control.</strong>
 </p>
 
+<p align="center">
 ![Logo](https://raw.githubusercontent.com/BansheeTech/Disavow-Generator/refs/heads/main/ui/img/Logo.png)
+</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3,11+-blue?logo=python&logoColor=white" alt="Python">
