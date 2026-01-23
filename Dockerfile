@@ -15,6 +15,10 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Install gosu for dropping privileges
+RUN apt-get update && apt-get install -y --no-install-recommends gosu && \
+    rm -rf /var/lib/apt/lists/*
+
 # App
 COPY app.py .
 COPY pymodules/ pymodules/
@@ -25,7 +29,9 @@ RUN useradd -m -u 1000 disavow && \
     mkdir -p __DISAVOW_DATA__/INGEST __DISAVOW_DATA__/OUTPUT conf && \
     chown -R disavow:disavow /app
 
-USER disavow
+# Entrypoint
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
 # Expose
 EXPOSE 44444
@@ -35,4 +41,4 @@ HEALTHCHECK --interval=30s --timeout=5s --start-period=5s --retries=3 \
     CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:44444/login')" || exit 1
 
 # Glory
-CMD ["python", "app.py"]
+ENTRYPOINT ["/entrypoint.sh"]
