@@ -1,0 +1,17 @@
+{
+  "ui/vue3/static/css/global.css": {
+    "file": "disavow_DqDQ6bKnIva0oC3N.css",
+    "src": "ui/vue3/static/css/global.css",
+    "isEntry": true,
+    "name": "global",
+    "names": [
+      "global.css"
+    ]
+  },
+  "ui/vue3/static/js/MountPoints/__main__.ts": {
+    "file": "disavow_BBw2YsJIawrcjdGx.js",
+    "name": "__main__",
+    "src": "ui/vue3/static/js/MountPoints/__main__.ts",
+    "isEntry": true
+  }
+}

@@ -1,0 +1,13 @@
+---
+services:
+  disavow-generator:
+    build: .
+    container_name: disavow-generator
+    restart: unless-stopped
+    ports:
+      - "44444:44444"
+    volumes:
+      - ./disavow_data:/app/__DISAVOW_DATA__
+      - ./disavow_conf:/app/conf
+    environment:
+      - TZ=Europe/Madrid

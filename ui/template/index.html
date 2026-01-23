@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Disavow Generator - SEO Defense Tool</title>
+    <meta name="description" content="Generate disavow files to protect your site from negative SEO attacks" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%233b82f6'><path d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'/></svg>" />
+
+    {{ vitecss("global") | safe }} {{ vitecss("__main__") | safe }}
+  </head>
+  <body>
+    <div id="app-root"></div>
+
+    <script id="data-stats" type="application/json">
+      {{ stats }}
+    </script>
+    <script id="data-whitelist" type="application/json">
+      {{ whitelist }}
+    </script>
+    <script id="data-username" type="application/json">
+      "{{ username }}"
+    </script>
+
+    {{ vitejs("__main__") | safe }}
+  </body>
+</html>
