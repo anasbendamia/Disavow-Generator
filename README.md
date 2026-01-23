@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-![Logo](https://raw.githubusercontent.com/BansheeTech/Disavow-Generator/refs/heads/main/ui/img/Logo.png)
+<img src="https://raw.githubusercontent.com/BansheeTech/Disavow-Generator/refs/heads/main/ui/img/Logo.png" alt="Disavow-Generator Logo">
 </p>
 
 <p align="center">
